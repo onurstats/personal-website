@@ -3,51 +3,52 @@
   <head>
     <meta charset="UTF-8" />
 
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <link rel="mask-icon" href="/logo.svg" color="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#24273a" />
+    <meta name="theme-color" content="#8AADF4" />
+    <meta name="background-color" content="#24273a" />
     <style>
       :root {
         --bg: #24273a;
-        --font: "futura-pt", sans-serif;
-        --text: #cad3f5;
-        --text-dark: #8aadf4;
-        --step-7: clamp(4.0313rem, 3.48rem + 2.7563vw, 5.9606rem);
-        --step-8: clamp(4.8375rem, 4.0909rem + 3.733vw, 7.4506rem);
       }
 
       body {
         background-color: var(--bg);
-        font-family: var(--font);
-        color: var(--text);
         margin: 0;
       }
 
       main {
         height: 100dvh;
         width: 100dvw;
-        display: grid;
-        place-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      h1 {
-        text-transform: uppercase;
-        font-size: var(--step-8);
-        font-weight: 400;
-        text-align: center;
+      img {
+        max-width: 100%;
+        display: block;
+        max-height: 100%;
+        object-fit: contain;
       }
-
-      .text-dark {
-        color: var(--text-dark);
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
       }
     </style>
-    <link rel="stylesheet" href="https://use.typekit.net/ozj1bkj.css" />
     <title>Onur Yanar | Personal Website</title>
   </head>
   <body>
     <main>
-      <h1>Onur <span class="text-dark">Yanar</span></h1>
+      <h1 class="sr-only">Onur Yanar</h1>
+      <img src="/home.svg" alt="Home Page" />
     </main>
   </body>
 </html>
