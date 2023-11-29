@@ -1,0 +1,39 @@
+:root{
+  --bg: #24273A;
+  --font: "futura-pt", sans-serif;
+  --text: #CAD3F5;
+  --text-dark: #8AADF4;
+  --step-0: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2893rem + 0.3036vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5248rem + 0.4759vw, 1.9531rem);
+  --step-3: clamp(1.9438rem, 1.8016rem + 0.7107vw, 2.4413rem);
+  --step-4: clamp(2.3325rem, 2.127rem + 1.0277vw, 3.0519rem);
+  --step-5: clamp(2.7994rem, 2.5092rem + 1.4509vw, 3.815rem);
+  --step-6: clamp(3.3594rem, 2.9569rem + 2.0125vw, 4.7681rem);
+  --step-7: clamp(4.0313rem, 3.48rem + 2.7563vw, 5.9606rem);
+  --step-8: clamp(4.8375rem, 4.0909rem + 3.733vw, 7.4506rem);
+}
+
+body{
+  background-color: var(--bg);
+  font-family: var(--font);
+  color: var(--text);
+  margin: 0;
+}
+
+main {
+  height: 100dvh;
+  width: 100dvw;
+  display: grid;
+  place-items: center;
+}
+
+h1{
+  text-transform: uppercase;
+  font-size: var(--step-8);
+  font-weight: 400;
+}
+
+.text-dark {
+  color: var(--text-dark);
+}
