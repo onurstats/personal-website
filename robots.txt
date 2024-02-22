@@ -1,8 +1,0 @@
-//robots.txt
-
-# Allow all crawlers
-User-agent: *
-Allow: /
-
-Sitemap: https://www.onuryanar.com/sitemap.xml
-Sitemap: https://onuryanar.com/sitemap.xml
