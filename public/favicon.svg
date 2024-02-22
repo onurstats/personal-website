@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <rect y=".5" width="1024" height="1024" style="fill: #e6dfcd; stroke-width: 0px;"/>
+  <g>
+    <rect x="533.9" y="499.07" width="156.42" height="156.42" style="fill: #333; stroke-width: 0px;"/>
+    <circle cx="221.05" cy="499.07" r="156.42" style="fill: #f25832; stroke-width: 0px;"/>
+    <rect x="508.63" y="681.35" width="0" height="0" transform="translate(-332.81 559.21) rotate(-45)" style="fill: #f25832; stroke-width: 0px;"/>
+    <rect x="533.9" y="342.65" width="156.42" height="156.42" style="fill: #3879a5; stroke-width: 0px;"/>
+    <path d="M377.48,342.65c-86.39,0-156.42,70.03-156.42,156.42h312.85c0-86.39-70.03-156.42-156.42-156.42Z" style="fill: #f6ca03; stroke-width: 0px;"/>
+    <path d="M690.32,499.08h-156.42s0,156.42,0,156.42c86.39,0,156.42-70.03,156.42-156.42Z" style="fill: #f25832; stroke-width: 0px;"/>
+    <polygon points="690.32 499.07 690.32 655.5 959.37 655.5 690.32 499.07" style="fill: #f6ca03; stroke-width: 0px;"/>
+    <circle cx="768.54" cy="420.86" r="78.21" style="fill: #f25832; stroke-width: 0px;"/>
+    <path d="M533.9,655.5v-156.42s-156.42,0-156.42,0c0,86.39,70.03,156.42,156.42,156.42Z" style="fill: #3879a5; stroke-width: 0px;"/>
+    <path d="M377.48,499.08h-156.42s0,156.42,0,156.42c86.39,0,156.42-70.03,156.42-156.42Z" style="fill: #333; stroke-width: 0px;"/>
+  </g>
+</svg>
