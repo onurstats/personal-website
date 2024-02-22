@@ -1,0 +1,93 @@
+/**
+ * onuryanar.com Stylesheet 
+ * @author Onur Yanar | o.yanar@hotmail.com
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html{
+  overflow: hidden;
+}
+
+.skip-to-main-link {
+  background: #fff;
+  color: #333;
+  font-weight: 700;
+  left: 50%;
+  padding: 4px;
+  position: absolute;
+  transform: translate(-50%,calc(-100% - 55px));
+  transition: transform .3s;
+  z-index: 500;
+}
+
+:root {
+  --bg: #E6DFCD;
+  --system-stack: "Arial", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --body-font: "carlmarx", var(--system-stack);
+  --heading-font: "bigcity-grotesque-pro", var(--system-stack);
+  --cream: #E6DFCD;
+  --red: #F25832;
+  --blue: #3879A5;
+  --yellow: #F6CA03;
+  --black: #333333;
+  --header-height: 124px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+  color: var(--red);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--black);
+  background: var(--yellow);
+}
+
+::selection {
+  color: var(--black);
+  background: var(--yellow);
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--black);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+header {
+  position: fixed;
+  top:0px;
+}
