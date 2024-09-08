@@ -3,14 +3,6 @@
  * @author Onur Yanar | o.yanar@hotmail.com
  */
 
-* {
-  box-sizing: border-box;
-}
-
-html{
-  overflow: hidden;
-}
-
 .skip-to-main-link {
   background: #fff;
   color: #333;
@@ -18,20 +10,22 @@ html{
   left: 50%;
   padding: 4px;
   position: absolute;
-  transform: translate(-50%,calc(-100% - 55px));
-  transition: transform .3s;
+  transform: translate(-50%, calc(-100% - 55px));
+  transition: transform 0.3s;
   z-index: 500;
 }
 
 :root {
-  --bg: #E6DFCD;
-  --system-stack: "Arial", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --bg: #e6dfcd;
+  --system-stack: "Arial", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+    arial, sans-serif;
   --body-font: "carlmarx", var(--system-stack);
   --heading-font: "bigcity-grotesque-pro", var(--system-stack);
-  --cream: #E6DFCD;
-  --red: #F25832;
-  --blue: #3879A5;
-  --yellow: #F6CA03;
+  --cream: #e6dfcd;
+  --red: #f25832;
+  --blue: #3879a5;
+  --yellow: #f6ca03;
   --black: #333333;
   --header-height: 124px;
 }
@@ -39,7 +33,8 @@ html{
 h2,
 h3,
 h4,
-h5 {
+h5,
+a {
   font-family: var(--heading-font);
   color: var(--red);
 }
@@ -62,32 +57,236 @@ body {
   color: var(--black);
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
+.ff-h {
+  font-family: var(--heading-font);
+}
+
+main > * {
+  border-width: 10px;
+  border-left-style: solid;
+  border-right-style: solid;
+  margin: 0 !important;
+}
+
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 900px;
+  --breakout-max-width: 1200px;
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+img.full-width {
+  width: 100%;
+  max-height: 45vh;
+  object-fit: cover;
+}
+
+:root {
+  --color-scheme: dark;
+
+  --font-family: "carlmarx";
+
+  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+
+  --clr-primary-300: hsl(219, 76%, 55%);
+  --clr-primary-400: hsl(219, 76%, 40%);
+  --clr-primary-500: hsl(219, 76%, 25%);
+  --clr-secondary-300: hsl(269, 75%, 55%);
+  --clr-secondary-400: hsl(269, 75%, 40%);
+  --clr-secondary-500: hsl(269, 75%, 25%);
+  --clr-accent-200: hsl(358, 85%, 80%);
+  --clr-accent-300: hsl(358, 72%, 65%);
+  --clr-accent-400: hsl(358, 72%, 50%);
+  --clr-accent-500: hsl(358, 72%, 35%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: var(--color-scheme);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--fs-400);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-title {
+  font-size: var(--fs-900);
+  line-height: 1.05;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--fs-800);
+  line-height: 1.1;
+}
+
+.bg-primary {
+  background: var(--clr-primary-500);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
-  padding: 0;
-  margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
-main {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    scroll-behavior: smooth;
-    overflow: auto;
-    scroll-snap-type: y mandatory;
+.call-to-action {
+  padding: 1rem;
+  background: hsl(0 0% 100% / 0.15);
 }
 
-section {
-  min-height: 100vh;
-  scroll-snap-align: start;
+.wrapper {
+  width: calc(100% - 3rem);
+  max-width: 900px;
+  margin-inline: auto;
 }
 
-header {
-  position: fixed;
-  top:0px;
+.flow > * + * {
+  margin-top: var(--flow-spacing, 1em);
+}
+
+.section-padding {
+  padding-block: 2.5rem;
+}
+
+.primary-header__layout {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-width: 10px;
+  border-bottom-width: 0;
+}
+
+.logo {
+  max-width: 250px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: max(5vw, 1rem);
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--clr-accent-500);
+  text-decoration: underline;
+}
+
+.even-columns {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(1px, 1fr));
+  padding-inline: 5vw;
+  gap: 2rem;
+  padding-bottom: 5vh;
+  --border-radius: 20px;
+  --border: 5px solid var(--black);
+  border-bottom: 10px solid;
+}
+
+.main-nav h5 {
+  font-family: var(--body-font);
+  color: var(--black);
+  font-weight: 400;
+  text-align: center;
+}
+
+.main-nav figure {
+  border-radius: var(--border-radius);
+  border: var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-nav figcaption {
+  font-family: var(--heading-font);
+  font-weight: bold;
+}
+
+.main-nav svg {
+  margin-inline: auto;
 }
