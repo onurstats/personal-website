@@ -6,7 +6,16 @@ const app = () => {
       x: -250,
       duration: 1,
     });
-
+    gsap.to("#header-seperator", {
+      scrollTrigger: {
+        trigger: "#orange",
+        scrub: true,
+        start: "top bottom",
+        end: "top top"
+      },
+      left: 0,
+      top: 78,
+    })
     gsap.from("aside", {
       scrollTrigger: {
         trigger: "#orange",
