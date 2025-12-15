@@ -1,0 +1,414 @@
+/**
+ * Resume Stylesheet
+ * Optimized for A4 PDF printing
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --system-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --body-font: "Jost", var(--system-stack);
+  --heading-font: "Space Grotesk", var(--system-stack);
+  --cream: #E6DFCD;
+  --red: #F25832;
+  --blue: #3879A5;
+  --yellow: #F6CA03;
+  --black: #333333;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 11pt;
+  line-height: 1.4;
+  color: var(--black);
+  background-color: #f5f5f5;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Resume Page - A4 size */
+.resume-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto;
+  padding: 15mm 20mm;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--black);
+  margin-bottom: 12px;
+}
+
+.header-left h1 {
+  font-family: var(--heading-font);
+  font-size: 28pt;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.header-left .title {
+  font-family: var(--heading-font);
+  font-size: 14pt;
+  font-weight: 600;
+  color: var(--black);
+  background-color: var(--black);
+  color: white;
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.contact-info {
+  list-style: none;
+  font-size: 9pt;
+}
+
+.contact-info li {
+  margin-bottom: 3px;
+}
+
+.contact-info li i {
+  width: 14px;
+  text-align: center;
+  margin-right: 4px;
+}
+
+.contact-info a {
+  color: var(--black);
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: 12px;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-list li {
+  font-size: 9pt;
+  padding: 4px 10px;
+  border: 2px solid var(--black);
+  background-color: white;
+}
+
+.skills-list li:nth-child(1) {
+  box-shadow: 3px 3px 0 var(--red);
+}
+
+.skills-list li:nth-child(2) {
+  box-shadow: 3px 3px 0 var(--blue);
+}
+
+.skills-list li:nth-child(3) {
+  box-shadow: 3px 3px 0 var(--yellow);
+}
+
+/* Section Headings */
+h2 {
+  font-family: var(--heading-font);
+  font-size: 12pt;
+  font-weight: 700;
+  color: white;
+  background-color: var(--black);
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+h2 i {
+  margin-right: 6px;
+}
+
+/* Summary Section */
+.summary-section {
+  margin-bottom: 14px;
+}
+
+.summary-section p {
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 14px;
+}
+
+.job {
+  margin-bottom: 10px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.job-header h3 {
+  font-family: var(--heading-font);
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.job-header .company {
+  font-size: 10pt;
+  color: var(--black);
+}
+
+.job-header .company::before {
+  content: "—";
+  margin-right: 8px;
+}
+
+.job-header .date {
+  font-size: 9pt;
+  color: #666;
+  margin-left: auto;
+}
+
+.job-details {
+  padding-left: 18px;
+  font-size: 9.5pt;
+}
+
+.job-details li {
+  margin-bottom: 2px;
+}
+
+/* Projects Section */
+.projects-section {
+  margin-bottom: 14px;
+}
+
+.project {
+  margin-bottom: 8px;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project strong {
+  font-family: var(--heading-font);
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+.project a {
+  font-size: 9pt;
+  color: var(--black);
+}
+
+.project-details {
+  font-size: 9pt;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Education Section */
+.education-section {
+  margin-bottom: 14px;
+}
+
+.education {
+  margin-bottom: 8px;
+}
+
+.education:last-child {
+  margin-bottom: 0;
+}
+
+.education-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.education-header h3 {
+  font-family: var(--heading-font);
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.education-header .school {
+  font-size: 10pt;
+}
+
+.education-header .school::before {
+  content: "—";
+  margin-right: 8px;
+}
+
+.education-header .date {
+  font-size: 9pt;
+  color: #666;
+  margin-left: auto;
+}
+
+.education-details {
+  font-size: 9pt;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* References Section */
+.references-section {
+  margin-bottom: 14px;
+}
+
+.reference {
+  font-size: 10pt;
+  margin-bottom: 4px;
+}
+
+.reference-note {
+  color: #666;
+  font-size: 9pt;
+}
+
+/* Technical Skills Section */
+.tech-section {
+  margin-bottom: 14px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 20px;
+  font-size: 9.5pt;
+}
+
+.tech-category strong {
+  font-weight: 600;
+}
+
+/* Print Button */
+.print-button {
+  text-align: center;
+  padding: 20px;
+}
+
+.print-button button {
+  font-family: var(--heading-font);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  background-color: var(--black);
+  color: white;
+  border: 3px solid var(--black);
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--red);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.print-button button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--red);
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  .resume-page {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 12mm 15mm;
+    box-shadow: none;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .skills-list li {
+    box-shadow: 2px 2px 0 var(--black) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  h2, .header-left .title {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Screen adjustments for smaller screens */
+@media screen and (max-width: 800px) {
+  .resume-page {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .resume-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-right {
+    text-align: left;
+  }
+
+  .job-header,
+  .education-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .job-header .date,
+  .education-header .date {
+    margin-left: 0;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
