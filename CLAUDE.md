@@ -6,6 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal website for Onur Yanar (onuryanar.com) - a simple static site built with Vite.
 
+## Deployment
+
+- **Hosting:** Vercel (auto-deploys from `main` branch)
+- **Production URL:** onuryanar.com
+- **Preview URL:** personal-website-onurstats.vercel.app
+
 ## Commands
 
 - `npm run dev` - Start development server
