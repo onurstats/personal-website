@@ -25,9 +25,9 @@ html{
 
 :root {
   --bg: #E6DFCD;
-  --system-stack: "Arial", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-  --body-font: "carlmarx", var(--system-stack);
-  --heading-font: "bigcity-grotesque-pro", var(--system-stack);
+  --system-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --body-font: "Jost", var(--system-stack);
+  --heading-font: "Space Grotesk", var(--system-stack);
   --cream: #E6DFCD;
   --red: #F25832;
   --blue: #3879A5;
