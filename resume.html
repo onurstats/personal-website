@@ -25,7 +25,7 @@
       </div>
       <div class="header-right">
         <ul class="contact-info">
-          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:o.yanar@hotmail.com">o.yanar@hotmail.com</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="#" id="email-link"><span id="email-text"></span></a></li>
           <li><i class="fa-solid fa-globe"></i> <a href="https://onuryanar.com">onuryanar.com</a></li>
           <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/oyanar">linkedin.com/in/oyanar</a></li>
           <li><i class="fa-brands fa-github"></i> <a href="https://github.com/onurstats">github.com/onurstats</a></li>
@@ -51,26 +51,13 @@
 
       <article class="job">
         <div class="job-header">
-          <h3>Web Developer</h3>
-          <span class="company">Freelance</span>
-          <span class="date">Dec 2025 - Present</span>
-        </div>
-        <ul class="job-details">
-          <li>Developed cross-platform solutions to enhance user experience and functionality</li>
-          <li>Specialized in fixing AI-related bugs and implementing new features for Shopify and BigCommerce themes</li>
-          <li>Set up advanced tracking using Google Tag Manager (GTag) and Google Analytics 4 (GA4)</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-header">
           <h3>Front End Developer (e-commerce)</h3>
           <span class="company">Optimum7.com</span>
           <span class="date">Jan 2022 - Dec 2025</span>
         </div>
         <ul class="job-details">
-          <li>Implemented design changes to enhance user experience across e-commerce platforms</li>
-          <li>Customized BigCommerce and Shopify templates to integrate new functionalities</li>
+          <li>Implemented CRO recommendations and pixel-perfect designs across 60+ e-commerce stores</li>
+          <li>Built custom product configurators, pricing calculators, and interactive part builders for complex B2B and B2C catalogs</li>
           <li>Developed headless e-commerce solutions using Next.js to improve site performance</li>
           <li>Integrated advanced tracking codes for Google Analytics to optimize data insights</li>
         </ul>
@@ -122,16 +109,16 @@
         <p class="project-details">Created cross-platform mobile app that scans toy barcodes and generates quotes based on supplied images. Managed App Store and Google Play publishing and ongoing maintenance. Ionic React, Cordova, iOS, Android.</p>
       </div>
       <div class="project">
-        <strong>Nexus</strong> — <a href="#" target="_blank">URL</a>
-        <p class="project-details">Project details needed.</p>
+        <strong>Nexus Group</strong> — <a href="https://www.cherrybrook.com" target="_blank">cherrybrook.com</a> · <a href="https://groomerspro.com" target="_blank">groomerspro.com</a> · <a href="https://chrischristensen.com" target="_blank">chrischristensen.com</a>
+        <p class="project-details">Maintaining and updating designs for three Nexus brand pet product shops. Implemented third-party integrations: Algolia, Klevu, Klaviyo. Advanced e-commerce tracking with GA4, GTM, and Floodlight conversions. BigCommerce Stencil.</p>
       </div>
       <div class="project">
-        <strong>Grantdays.eu</strong> — <a href="#" target="_blank">URL</a>
-        <p class="project-details">Project details needed.</p>
+        <strong>Grantdays.eu</strong> — <a href="https://grantdays.eu" target="_blank">grantdays.eu</a>
+        <p class="project-details">Developed two separate apps for a gift registry platform: registry management and sharing features. Multi-language, multi-channel e-commerce solution. React, BigCommerce Stencil.</p>
       </div>
       <div class="project">
-        <strong>Orange Coast Pneumatics / OCAIRE</strong> — <a href="#" target="_blank">URL</a>
-        <p class="project-details">Project details needed.</p>
+        <strong>Orange Coast Pneumatics / OCAIRE</strong> — <a href="https://ocpneumatics.com" target="_blank">ocpneumatics.com</a>
+        <p class="project-details">Redesigned and modernized e-commerce platform. Built advanced part builder UI and product configurator for industrial parts with dynamic manuals, references, 3D part viewer, and SMC Products API integration. Implemented advanced search UI with FAQ, part, and document search using Meilisearch. BigCommerce.</p>
       </div>
     </section>
 
@@ -205,6 +192,20 @@
   <div class="print-button no-print">
     <button onclick="window.print()">Print / Save as PDF</button>
   </div>
+
+  <script>
+    (function() {
+      var u = 'o.yanar';
+      var d = 'hotmail.com';
+      var e = u + '@' + d;
+      var link = document.getElementById('email-link');
+      var text = document.getElementById('email-text');
+      if (link && text) {
+        link.href = 'mai' + 'lto:' + e;
+        text.textContent = e;
+      }
+    })();
+  </script>
 </body>
 
 </html>
